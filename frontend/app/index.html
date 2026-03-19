@@ -2,17 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Smart Farm Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soundous Night Chase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Creepster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-container">
-	<form id="loginForm">
-  	<input type="text" id="username" placeholder="Username" required>
-  	<input type="password" id="password" placeholder="Password" required>
-  	<button type="submit">Login</button>
-	</form>
-  </div>
+  <main class="app-shell">
+    <section class="intro-card">
+      <p class="eyebrow">For Soundous, from Ismail</p>
+      <h1>Doll &amp; Vampire Kiss Chase</h1>
+      <p class="subtitle">
+        Catch cute vampire-doll Soundous before moonlight fades so Ismail can deliver a sweet kiss.
+      </p>
+
+      <div class="hud" aria-label="Game stats">
+        <div class="hud-item">
+          <span class="label">Level</span>
+          <strong id="levelValue">1</strong>
+        </div>
+        <div class="hud-item">
+          <span class="label">Kisses</span>
+          <strong id="scoreValue">0</strong>
+        </div>
+        <div class="hud-item">
+          <span class="label">Time</span>
+          <strong id="timeValue">25</strong>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="startButton" class="primary-button">Start the chase</button>
+        <button id="resetButton" class="secondary-button" type="button">Reset</button>
+      </div>
+
+      <p id="message" class="message" role="status">
+        Tap start, then move Ismail with your keyboard or by tapping inside the play area.
+      </p>
+
+      <ul class="tips">
+        <li>Use <strong>arrow keys</strong> or <strong>WASD</strong> to move.</li>
+        <li>On touch screens, tap where you want Ismail to run.</li>
+        <li>Catch Soundous 5 times before the timer ends.</li>
+      </ul>
+    </section>
+
+    <section class="game-card">
+      <div class="sky-decor" aria-hidden="true">
+        <span class="moon"></span>
+        <span class="spark spark-1"></span>
+        <span class="spark spark-2"></span>
+        <span class="spark spark-3"></span>
+      </div>
+
+      <div id="gameBoard" class="game-board" aria-label="Cute chase board">
+        <div id="player" class="character player" aria-label="Ismail the chaser">
+          <div class="avatar">💌</div>
+          <span>Ismail</span>
+        </div>
+
+        <div id="target" class="character target" aria-label="Soundous the runner">
+          <div class="avatar">🧛🏻‍♀️</div>
+          <span>Soundous</span>
+        </div>
+
+        <div id="kissBurst" class="kiss-burst" aria-hidden="true">💋 ✨ 🦇</div>
+      </div>
+    </section>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
